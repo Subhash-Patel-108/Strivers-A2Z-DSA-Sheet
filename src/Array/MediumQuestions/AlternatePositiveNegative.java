@@ -10,7 +10,7 @@ public class AlternatePositiveNegative {
 
             //filtering the array
             for(int i = 0 ; i < arr.size() ; i++) {
-                if(arr.get(i) <= 0) {
+                if(arr.get(i) >= 0) {
                     positiveElements.add(arr.get(i)) ;
                 }else{
                     negativeElements.add(arr.get(i)) ;
@@ -31,7 +31,19 @@ public class AlternatePositiveNegative {
                 idx ++ ;
             }
 
-            //
+            //copy the remaining elements
+            while (positiveIdx < positiveElements.size()) {
+                arr.set(idx , positiveElements.get(positiveIdx)) ;
+                idx ++ ;
+                positiveIdx ++ ;
+            }
+
+            while (negativeIdx < negativeElements.size()) {
+                arr.set(idx , negativeElements.get(negativeIdx)) ;
+                idx ++ ;
+                negativeIdx ++ ;
+            }
+            return ;
         }
     }
     public static void main(String[] args) {
