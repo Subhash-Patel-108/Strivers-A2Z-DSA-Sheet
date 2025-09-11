@@ -27,9 +27,17 @@ public class CeilFromBST {
                 //if the exact value is found
                 if(currNode.data == x){
                     return currNode.data ;
-                    
+                }
+
+                if(currNode.data > x) {
+                    ans = currNode.data ;
+                    currNode = currNode.left ;
+                }else{
+                    currNode = currNode.right ;
                 }
             }
+
+            return ans ;
         }
     }
     public static void main(String[] args) {
