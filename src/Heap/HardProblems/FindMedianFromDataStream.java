@@ -44,7 +44,7 @@ public class FindMedianFromDataStream {
             if(maxHeap.isEmpty()){
                 return -1.0 ;
             }
-            
+
             // The median is the largest element in the maxHeap.
             // If both heaps have the same size, the median is the average of the two middle elements.
             if (maxHeap.size() == minHeap.size()) {
