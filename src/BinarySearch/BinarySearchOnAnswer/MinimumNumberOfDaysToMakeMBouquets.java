@@ -25,7 +25,7 @@ public class MinimumNumberOfDaysToMakeMBouquets {
                     left = mid + 1;
                 }
             }
-            // The left boundary of binary search will be the answer
+            // The next boundary of binary search will be the answer
             return left;
         }
 

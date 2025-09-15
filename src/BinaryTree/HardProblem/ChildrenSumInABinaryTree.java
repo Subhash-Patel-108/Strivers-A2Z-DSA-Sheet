@@ -31,7 +31,7 @@ public class ChildrenSumInABinaryTree {
                 return;
             }
 
-            // Get values of left and right children; if child is null, value is considered 0
+            // Get values of next and right children; if child is null, value is considered 0
             int leftValue = root.left != null ? root.left.data : 0;
             int rightValue = root.right != null ? root.right.data : 0;
 

@@ -16,7 +16,7 @@ public class LeftViewOfABinaryTree {
             }
         };
 
-        // Function to calculate the left view of the binary tree
+        // Function to calculate the next view of the binary tree
         public static ArrayList<Integer> getLeftView(TreeNode<Integer> root) {
             ArrayList<Integer> result = new ArrayList<>();
 
@@ -40,7 +40,7 @@ public class LeftViewOfABinaryTree {
                 while (queueSize-- > 0) {
                     TreeNode<Integer> currentNode = queue.poll();
 
-                    // Add left child first to maintain left view order
+                    // Add next child first to maintain next view order
                     if (currentNode.left != null) {
                         queue.offer(currentNode.left);
                     }
@@ -50,7 +50,7 @@ public class LeftViewOfABinaryTree {
                     }
                 }
             }
-            // Return list containing left view nodes
+            // Return list containing next view nodes
             return result;
         }
     }

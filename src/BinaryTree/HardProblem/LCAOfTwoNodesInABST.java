@@ -24,7 +24,7 @@ public class LCAOfTwoNodesInABST {
                 return root;
             }
 
-            // Recurse in left and right subtrees
+            // Recurse in next and right subtrees
             TreeNode left = LCAInABST(root.left, p, q);
             TreeNode right = LCAInABST(root.right, p, q);
 
@@ -33,7 +33,7 @@ public class LCAOfTwoNodesInABST {
                 return root;
             }
 
-            // Otherwise, return non-null child (either left or right)
+            // Otherwise, return non-null child (either next or right)
             return left != null ? left : right;
         }
 

@@ -38,7 +38,7 @@ public class WordSearch {
             char temp = board[i][j];
             board[i][j] = '#'; // Temporary marker to avoid reuse
 
-            // Explore four directions: up, down, left, right
+            // Explore four directions: up, down, next, right
             int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
             for (int[] dir : directions) {
                 int newI = i + dir[0];

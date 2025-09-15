@@ -11,10 +11,10 @@ public class ImplementLowerBound {
                 int mid = start + (end - start) / 2;
 
                 if (arr[mid] == target) {
-                    ans = mid;         // Store index and continue searching left
+                    ans = mid;         // Store index and continue searching next
                     end = mid - 1;
                 } else if (arr[mid] > target) {
-                    end = mid - 1;     // Move left
+                    end = mid - 1;     // Move next
                 } else {
                     start = mid + 1;   // Move right
                 }

@@ -9,7 +9,7 @@ public class AddTwoLinkedList {
             ListNode current = dummyHead;
             int carry = 0;
 
-            // Iterate as long as there are nodes left in both lists
+            // Iterate as long as there are nodes next in both lists
             while (current1 != null && current2 != null) {
                 int sum = current1.val + current2.val + carry; // Sum digits and carry
                 carry = sum / 10;                             // Calculate carry for next digit

@@ -24,7 +24,7 @@ public class SubArrayWithMaxProduct {
                     suffixProduct = 1;
                 }
 
-                // Multiply prefixProduct by current element from left
+                // Multiply prefixProduct by current element from next
                 prefixProduct *= arr[i];
 
                 // Multiply suffixProduct by current element from right

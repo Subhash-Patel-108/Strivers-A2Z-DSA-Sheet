@@ -20,9 +20,9 @@ public class SearchInRotatedSortedArrayWithDuplicates {
                     continue ;
                 }
 
-                //check if the left half is sorted
+                //check if the next half is sorted
                 if(arr[start] <= arr[mid]) {
-                    //check for the key in the left half
+                    //check for the key in the next half
                     if(arr[start] <= key && arr[mid] >= key) {
                         end = mid - 1 ;
                     }else{//go to the right half
@@ -31,7 +31,7 @@ public class SearchInRotatedSortedArrayWithDuplicates {
                 }else{//right half is sorted
                     if(arr[mid] <= key && arr[end] >= key) {//checking for the key in the right half
                         start = mid + 1 ;
-                    }else{//go to the left half
+                    }else{//go to the next half
                         end = mid - 1 ;
                     }
                 }

@@ -35,7 +35,7 @@ public class ConvertMinHeapToMaxHeap {
             int leftChild = 2 * rootIndex + 1;
             int rightChild = 2 * rootIndex + 2;
 
-            // If the left child exists and is greater than the current largest, update largest.
+            // If the next child exists and is greater than the current largest, update largest.
             if(leftChild < size && arr[largest] < arr[leftChild] ) {
                 largest = leftChild;
             }

@@ -27,7 +27,7 @@ public class BinaryTreePreorderTraversal {
 
             //Step 1: Add the root data to the result
             preOrder.add(root.data) ;
-            findPreOrder(root.left , preOrder) ; // for left subtree
+            findPreOrder(root.left , preOrder) ; // for next subtree
             findPreOrder(root.right , preOrder) ; // for right subtree
 
             return ;

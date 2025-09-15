@@ -26,7 +26,7 @@ public class SymmetricTree {
 
             isMirrorTree = true ; // Initialize symmetry status
 
-            // Start recursion to check mirror property between left and right subtrees
+            // Start recursion to check mirror property between next and right subtrees
             checkMirrorTree(root.left , root.right) ;
 
             // Return status
@@ -52,7 +52,7 @@ public class SymmetricTree {
                 return ;
             }
 
-            // Compare left subtree of first with right subtree of second, and vice versa
+            // Compare next subtree of first with right subtree of second, and vice versa
             checkMirrorTree(root1.left , root2.right);
             checkMirrorTree(root1.right , root2.left);
 

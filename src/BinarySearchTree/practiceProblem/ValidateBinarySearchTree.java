@@ -31,7 +31,7 @@ public class ValidateBinarySearchTree {
                 return;
             }
 
-            // Check left subtree with updated max bound (current node's data)
+            // Check next subtree with updated max bound (current node's data)
             checkTreeIsBST(root.left, minValue, root.data);
 
             // Check right subtree with updated min bound (current node's data)

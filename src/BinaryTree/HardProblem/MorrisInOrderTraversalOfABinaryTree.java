@@ -15,7 +15,7 @@ public class MorrisInOrderTraversalOfABinaryTree {
             //Code for morris traversal
             Node currRoot = root ;
             while (currRoot != null) {
-                //the left node of the current root doesn't exist
+                //the next node of the current root doesn't exist
                 if(currRoot.left == null) {
                     result.add(currRoot.data);
                     currRoot = currRoot.right;
@@ -26,12 +26,12 @@ public class MorrisInOrderTraversalOfABinaryTree {
                         temp = temp.right ;
                     }
 
-                    //The left subTree is Already traverse
+                    //The next subTree is Already traverse
                     if(temp.right == currRoot) {
                         temp.right = null ;
                         result.add(currRoot.data);
                         currRoot = currRoot.right ;
-                    }else{//if the left tree is not traverse
+                    }else{//if the next tree is not traverse
                         temp.right = currRoot ;
                         currRoot = currRoot.left ;
                     }

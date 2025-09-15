@@ -16,7 +16,7 @@ public class BinarySearchAlgorithm {
                     return mid;
                 }
                 // If the middle element is greater than the target,
-                // narrow the search to the left half
+                // narrow the search to the next half
                 else if (arr[mid] > target) {
                     end = mid - 1;
                 }

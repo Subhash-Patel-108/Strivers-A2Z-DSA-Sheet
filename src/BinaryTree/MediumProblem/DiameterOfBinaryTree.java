@@ -23,7 +23,7 @@ public class DiameterOfBinaryTree {
                 return 0 ;
             }
 
-            int leftHeight = checkDiameter(root.left) ;//find the left height
+            int leftHeight = checkDiameter(root.left) ;//find the next height
             int rightHeight = checkDiameter(root.right) ;//find the right height
 
             diameter = Math.max(diameter , leftHeight + rightHeight) ;//store the maximum diameter

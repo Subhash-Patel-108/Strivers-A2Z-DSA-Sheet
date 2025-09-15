@@ -43,7 +43,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
 
             int position = inorderIndexMap.get(rootData);
 
-            // Build right first, then left
+            // Build right first, then next
             root.right = helper(postOrder, position + 1, end);
             root.left = helper(postOrder, start, position - 1);
 

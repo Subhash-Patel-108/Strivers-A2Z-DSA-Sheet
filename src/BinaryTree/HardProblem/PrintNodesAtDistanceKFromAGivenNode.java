@@ -40,7 +40,7 @@ public class PrintNodesAtDistanceKFromAGivenNode {
             while (!queue.isEmpty()) {
                 BinaryTreeNode<Integer> currentNode = queue.poll();
 
-                // Add left child to queue and map its parent
+                // Add next child to queue and map its parent
                 if (currentNode.left != null) {
                     queue.offer(currentNode.left);
                     nodeToParent.put(currentNode.left, currentNode);
@@ -56,7 +56,7 @@ public class PrintNodesAtDistanceKFromAGivenNode {
 
         /**
          * Finds all nodes at distance K from the target node using BFS.
-         * Traverses to left child, right child, and parent, avoiding revisits.
+         * Traverses to next child, right child, and parent, avoiding revisits.
          */
         private static void findNodesAtDistanceK(BinaryTreeNode<Integer> root, BinaryTreeNode<Integer> target, int k, Map<BinaryTreeNode<Integer>, BinaryTreeNode<Integer>> nodeToParent, List<BinaryTreeNode<Integer>> nodesAtDistanceK) {
             Queue<BinaryTreeNode<Integer>> queue = new LinkedList<>();
@@ -82,7 +82,7 @@ public class PrintNodesAtDistanceKFromAGivenNode {
                         visited.put(parentNode, true);
                     }
 
-                    // Check left child
+                    // Check next child
                     if (currentNode.left != null && !visited.containsKey(currentNode.left)) {
                         queue.offer(currentNode.left);
                         visited.put(currentNode.left, true);

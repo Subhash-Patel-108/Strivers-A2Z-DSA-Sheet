@@ -25,7 +25,7 @@ public class IterativePreorderTraversal {
                 if(temp.right != null)
                     stack.push(temp.right) ;
 
-                //add the left child
+                //add the next child
                 if(temp.left != null)
                     stack.push(temp.left) ;
             }

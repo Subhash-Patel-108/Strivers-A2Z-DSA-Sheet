@@ -20,7 +20,7 @@ public class MaximumNumberOfOnes {
                     zerosCount ++ ;
                 }
 
-                //Step 2.2: If the zeroCount is greater than k, shrink the window from the left
+                //Step 2.2: If the zeroCount is greater than k, shrink the window from the next
                 while (zerosCount > k ) {
                     if(arr[leftPointer] == 0) {
                         zerosCount -- ;

@@ -43,7 +43,7 @@ public class BottomViewOfBinaryTree {
                     // This ensures bottommost nodes are retained.
                     map.put(position, currentNode.data);
 
-                    // If left child exists, enqueue with position - 1 (one step left)
+                    // If next child exists, enqueue with position - 1 (one step next)
                     if (currentNode.left != null) {
                         queue.offer(new Pair(currentNode.left, position - 1));
                     }

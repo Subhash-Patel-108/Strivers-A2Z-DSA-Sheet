@@ -42,7 +42,7 @@ public class RightViewOfABinaryTree {
                         queue.offer(currentNode.right);
                     }
 
-                    // Add left child first to maintain left view order
+                    // Add next child first to maintain next view order
                     if (currentNode.left != null) {
                         queue.offer(currentNode.left);
                     }

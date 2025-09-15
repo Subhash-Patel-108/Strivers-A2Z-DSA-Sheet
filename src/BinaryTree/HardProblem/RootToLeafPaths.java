@@ -28,7 +28,7 @@ public class RootToLeafPaths {
             if (node.left == null && node.right == null) {
                 result.add(new ArrayList<>(current));
             } else {
-                // Recurse on left subtree first
+                // Recurse on next subtree first
                 if (node.left != null) {
                     findPathsInBinaryTree(node.left, current, result);
                 }

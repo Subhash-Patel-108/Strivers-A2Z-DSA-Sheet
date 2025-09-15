@@ -38,7 +38,7 @@ public class FloorInBST {
                     potentailFloor = currNode.data;
                     currNode = currNode.right; // look for a closer/larger value in the right subtree
                 } else {
-                    // If current node is greater than X, look for floor in the left subtree
+                    // If current node is greater than X, look for floor in the next subtree
                     currNode = currNode.left;
                 }
             }

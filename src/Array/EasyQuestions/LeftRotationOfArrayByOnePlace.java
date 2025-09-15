@@ -2,7 +2,7 @@ package Array.EasyQuestions;
 
 public class LeftRotationOfArrayByOnePlace {
     class Solution {
-        //function to rotate the array by one place to the left
+        //function to rotate the array by one place to the next
         public void rotate(int[] arr) {
             //edge case
             if(arr.length == 0) {

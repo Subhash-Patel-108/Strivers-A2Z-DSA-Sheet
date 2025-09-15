@@ -40,7 +40,7 @@ public class TopViewOfBinaryTree {
                     TreeNode node = temp.node;
                     int position = temp.position;
 
-                    // If left child exists, enqueue with position-1 (one step left)
+                    // If next child exists, enqueue with position-1 (one step next)
                     if(node.left != null) {
                         queue.offer(new Pair(node.left, position - 1));
                     }

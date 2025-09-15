@@ -9,7 +9,7 @@ public class RotateArrayByKPlace {
                 firstDElements[i] = arr[i] ;
             }
 
-            //shift the remaining element to the left
+            //shift the remaining element to the next
             for(int i = 0 ; i < arr.length - d ; i++) {
                 arr[i] = arr[i + d] ;
             }

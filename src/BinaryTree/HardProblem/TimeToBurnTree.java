@@ -37,7 +37,7 @@ public class TimeToBurnTree {
             while (!queue.isEmpty()) {
                 BinaryTreeNode<Integer> node = queue.poll();
 
-                // If left child exists, record its parent and add to queue
+                // If next child exists, record its parent and add to queue
                 if(node.left != null) {
                     parentsMap.put(node.left, node);
                     queue.offer(node.left);
@@ -86,7 +86,7 @@ public class TimeToBurnTree {
                         newNodeBurn = true;
                     }
 
-                    // Burn left child if exists and not visited
+                    // Burn next child if exists and not visited
                     if(currentNode.left != null && !visitedNodes.containsKey(currentNode.left)) {
                         queue.offer(currentNode.left);
                         visitedNodes.put(currentNode.left, true);

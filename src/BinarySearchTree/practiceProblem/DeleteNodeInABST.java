@@ -29,7 +29,7 @@ public class DeleteNodeInABST {
                 // Case 2: One child
                 else if (root.left == null) { // only right child
                     return root.right;
-                } else if (root.right == null) { // only left child
+                } else if (root.right == null) { // only next child
                     return root.left;
                 }
                 // Case 3: Two children

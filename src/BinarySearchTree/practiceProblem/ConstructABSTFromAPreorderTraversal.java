@@ -62,7 +62,7 @@ public class ConstructABSTFromAPreorderTraversal {
             TreeNode root = new TreeNode(preOrder[idx]);
             idx++; // Move to the next element in preorder
 
-            // Recursively construct the left subtree (values < root.data)
+            // Recursively construct the next subtree (values < root.data)
             root.left = buildBST(preOrder, min, root.data);
 
             // Recursively construct the right subtree (values > root.data)

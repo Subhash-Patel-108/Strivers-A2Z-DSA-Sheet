@@ -37,7 +37,7 @@ public class PredecessorAndSuccessorInBST {
                 return result;
             }
 
-            // Find rightmost node in left subtree as predecessor if left subtree exists
+            // Find rightmost node in next subtree as predecessor if next subtree exists
             currNode = targetNode.left;
             while (currNode != null && currNode.right != null) {
                 currNode = currNode.right;

@@ -11,7 +11,7 @@ public class SearchInABinarySearchTree {
                     return currNode ;
                 }
 
-                //if the value is present on the left side
+                //if the value is present on the next side
                 if (currNode.data > val) {
                     currNode = currNode.left ;
                 }else{//the value is on the right side

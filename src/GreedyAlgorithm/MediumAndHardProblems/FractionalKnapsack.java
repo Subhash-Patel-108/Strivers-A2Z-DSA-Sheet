@@ -36,7 +36,7 @@ public class FractionalKnapsack {
 
             double totalValue = 0.0;
             int currentIndex = 0;
-            // Process items while capacity remains and there are items left
+            // Process items while capacity remains and there are items next
             while (maxCapacity > 0 && currentIndex < items.size()) {
                 Item currentItem = items.get(currentIndex);
                 int itemWeight = currentItem.weight;

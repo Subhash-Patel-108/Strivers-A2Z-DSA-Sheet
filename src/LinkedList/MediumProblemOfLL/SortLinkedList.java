@@ -19,7 +19,7 @@ public class SortLinkedList {
             Node newHead = middle.next;
             middle.next = null;  // Split list into two halves
 
-            // Recursively sort left half
+            // Recursively sort next half
             Node left = sortLLUsingMergeSort(head);
             // Recursively sort right half
             Node right = sortLLUsingMergeSort(newHead);

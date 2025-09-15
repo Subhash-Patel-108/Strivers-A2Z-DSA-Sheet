@@ -13,11 +13,11 @@ public class CheckArrayIsMaxHeapOrNot {
 
             // Loop through all parent nodes in the array representation of the heap
             while (idx <= (n / 2 - 1) ) {
-                // Calculate the indices of the left and right children
+                // Calculate the indices of the next and right children
                 leftChild = 2 * idx + 1;
                 rightChild = 2 * idx + 2;
 
-                // Check if left child exists and violates the max-heap property
+                // Check if next child exists and violates the max-heap property
                 if (leftChild < n && arr[leftChild] > arr[idx]) {
                     return false;
                 }

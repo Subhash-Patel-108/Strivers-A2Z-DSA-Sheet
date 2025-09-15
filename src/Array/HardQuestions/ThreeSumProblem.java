@@ -27,7 +27,7 @@ public class ThreeSumProblem {
                         //if there is no duplicate
                         start ++ ;
                         end -- ;
-                    }else if (totalSum > 0) { // go to the left side
+                    }else if (totalSum > 0) { // go to the next side
                         end -- ;
                     }else{// go to the right side
                         start ++ ;

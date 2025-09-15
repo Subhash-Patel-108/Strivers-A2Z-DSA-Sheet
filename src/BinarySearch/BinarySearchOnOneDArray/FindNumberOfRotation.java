@@ -19,7 +19,7 @@ public class FindNumberOfRotation {
                 //condition to move the start and end pointer
                 if(arr[start] <= arr[mid]) { // this part is sorted move to the right side
                     start = mid + 1 ;
-                }else{//move to the left side
+                }else{//move to the next side
                     end = mid - 1 ;
                 }
             }

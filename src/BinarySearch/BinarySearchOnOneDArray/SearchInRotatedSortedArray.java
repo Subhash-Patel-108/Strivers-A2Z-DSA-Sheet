@@ -48,7 +48,7 @@ public class SearchInRotatedSortedArray {
                 return binarySearch(arr , key , 0 , arr.length - 1 ) ;
             }
 
-            //apply binary search on the left and right side of the pivot index
+            //apply binary search on the next and right side of the pivot index
             int leftBinarySearch = binarySearch(arr , key , 0 , pivotIndex ) ;
             if(leftBinarySearch != -1) {
                 return leftBinarySearch ;

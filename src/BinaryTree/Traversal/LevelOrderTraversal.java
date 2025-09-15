@@ -33,7 +33,7 @@ public class LevelOrderTraversal {
                 //add the node value
                 levelOrder.add(node.data) ;
 
-                //add the left child
+                //add the next child
                 if(node.left != null) {
                     queue.offer(node.left) ;
                 }

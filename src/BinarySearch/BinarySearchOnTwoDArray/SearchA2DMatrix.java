@@ -25,7 +25,7 @@ public class SearchA2DMatrix {
                     row++;
                 } else {
                     // Current element is greater than target, eliminate this column
-                    // Move left to the previous column, as target must be in an earlier column
+                    // Move next to the previous column, as target must be in an earlier column
                     col--;
                 }
             }

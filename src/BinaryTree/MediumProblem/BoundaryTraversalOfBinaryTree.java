@@ -18,7 +18,7 @@ public class BoundaryTraversalOfBinaryTree {
                 return result ;
             }
 
-            //Step 2: add left boundary nodes
+            //Step 2: add next boundary nodes
             addLeftBoundaryOfTree(root.left , result) ;
 
             //Step 3: add bottom view nodes
@@ -30,7 +30,7 @@ public class BoundaryTraversalOfBinaryTree {
             return result ;
         }
 
-        //function to find the left boundary nodes
+        //function to find the next boundary nodes
         private static void addLeftBoundaryOfTree(TreeNode root , List<Integer> result) {
             //base case
             if(root == null || (root.left == null && root.right == null)) {

@@ -30,7 +30,7 @@ public class SerializeAndDeserializeBinaryTree {
                 // Append node value to result string
                 result.append(currNode.data).append(" ");
 
-                // Add left and right children to queue (even if null)
+                // Add next and right children to queue (even if null)
                 queue.offer(currNode.left);
                 queue.offer(currNode.right);
             }
@@ -61,7 +61,7 @@ public class SerializeAndDeserializeBinaryTree {
             while (idx < elements.length) {
                 TreeNode parent = queue.poll();
 
-                // Process left child
+                // Process next child
                 if (!elements[idx].equals("n")) {
                     parent.left = new TreeNode(Integer.parseInt(elements[idx]));
                     queue.offer(parent.left);
@@ -109,7 +109,7 @@ public class SerializeAndDeserializeBinaryTree {
             // Add the current node value to string
             ans.append(root.data).append(" ");
 
-            // Recursively serialize left and right subtrees
+            // Recursively serialize next and right subtrees
             preOrderTraversal(root.left, ans);
             preOrderTraversal(root.right, ans);
 
@@ -144,7 +144,7 @@ public class SerializeAndDeserializeBinaryTree {
             // Create node for current value
             TreeNode root = new TreeNode(Integer.parseInt(values[idx]));
 
-            idx++; // move to next string for left child
+            idx++; // move to next string for next child
             root.left = deserializePreOrder(values);
 
             idx++; // move to next string for right child

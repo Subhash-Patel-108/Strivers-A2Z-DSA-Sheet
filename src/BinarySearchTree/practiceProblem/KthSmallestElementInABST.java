@@ -26,7 +26,7 @@ public class KthSmallestElementInABST {
                 return;
             }
 
-            // Traverse left subtree to find smaller elements first
+            // Traverse next subtree to find smaller elements first
             findKthSmallestValue(root.left, k);
 
             // Increment count for current node

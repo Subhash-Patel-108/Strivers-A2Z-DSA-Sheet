@@ -21,7 +21,7 @@ public class InsertIntoABinarySearchTree {
                 return new TreeNode(val);
             }
 
-            // If value is less than current node, insert in left subtree
+            // If value is less than current node, insert in next subtree
             if(root.data > val) {
                 root.left = insertValueIntoBST(root.left, val);
             } else {

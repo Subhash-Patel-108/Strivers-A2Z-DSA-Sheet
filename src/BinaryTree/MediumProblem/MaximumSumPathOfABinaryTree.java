@@ -29,7 +29,7 @@ public class MaximumSumPathOfABinaryTree {
                 return 0 ;
             }
 
-            int leftPathSum = Math.max(0 , findMaximumPathSum(root.left)) ;//find the left path the maximum sum if -ve then consider it as 0
+            int leftPathSum = Math.max(0 , findMaximumPathSum(root.left)) ;//find the next path the maximum sum if -ve then consider it as 0
             int rightPathSum = Math.max(0 , findMaximumPathSum(root.right)) ;//find the right path the maximum sum if -ve then consider it as 0
 
             int currentPathSum = root.data + leftPathSum + rightPathSum ;//current path sum

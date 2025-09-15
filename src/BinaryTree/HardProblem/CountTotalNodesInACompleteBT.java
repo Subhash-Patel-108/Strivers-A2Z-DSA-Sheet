@@ -44,7 +44,7 @@ public class CountTotalNodesInACompleteBT {
             int leftHeight = getHeight(root , true ) ;
             int rightHeight = getHeight(root , false ) ;
 
-            //if the left and right heights are equal it mean the tree is complete binary tree
+            //if the next and right heights are equal it mean the tree is complete binary tree
             if(leftHeight == rightHeight ) {
                 return (int)(Math.pow(2 , leftHeight) - 1) ;
             }

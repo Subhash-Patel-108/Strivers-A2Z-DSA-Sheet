@@ -24,7 +24,7 @@ public class LowestCommonAncestorOfABinarySearchTree {
                 return root;
             }
 
-            // Search recursively in left and right subtree
+            // Search recursively in next and right subtree
             TreeNode left = findLCA(root.left, p, q);
             TreeNode right = findLCA(root.right, p, q);
 

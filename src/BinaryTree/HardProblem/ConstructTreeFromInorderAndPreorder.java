@@ -33,7 +33,7 @@ public class ConstructTreeFromInorderAndPreorder {
             // Create tree node with current preorder value and move to next index
             TreeNode root = new TreeNode(preorder[idx++]);
 
-            // Recursively build left subtree (elements before root in inorder)
+            // Recursively build next subtree (elements before root in inorder)
             root.left = helper(inorder, preorder, start, position - 1);
 
             // Recursively build right subtree (elements after root in inorder)

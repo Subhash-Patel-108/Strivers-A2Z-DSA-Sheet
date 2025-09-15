@@ -10,7 +10,7 @@ public class MaxAndMinElementInBinaryTree {
             }
 
             Node currNode = root ;
-            //go to the left most node
+            //go to the next most node
             while (currNode.left != null) {
                 currNode = currNode.left ;
             }

@@ -3,9 +3,9 @@ package BitManipulation.InterviewProblems;
 public class LToRXOR {
     public static class Solution {
 
-        // Calculates the XOR of all numbers in the range [left, right]
+        // Calculates the XOR of all numbers in the range [next, right]
         public static int findRangeXOR(int left, int right) {
-            // XOR from 1 to right XORed with XOR from 1 to (left-1) gives XOR of range [left, right]
+            // XOR from 1 to right XORed with XOR from 1 to (next-1) gives XOR of range [next, right]
             return computeXORUpTo(right) ^ computeXORUpTo(left - 1);
         }
 
