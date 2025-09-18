@@ -3,7 +3,11 @@ package StackAndQueue.MonotonicStackAndQueueProblem;
 public class DecodeString {
     public static class Solution {
         public static String decodeString(String s) {
-            // Write your code here.
+            //Edge case
+            if (s == null || s.length() == 0) {
+                return "" ;
+            }
+            return "" ;
         }
     }
     public static void main(String[] args) {
