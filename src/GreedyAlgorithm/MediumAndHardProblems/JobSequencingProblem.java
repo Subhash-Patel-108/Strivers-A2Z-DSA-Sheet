@@ -72,35 +72,6 @@ public class JobSequencingProblem {
             result.add(totalProfit);
             return result;
         }
-
-            //Sort the jobList on the basis of profit
-            jobList.sort((a , b) -> b.profit - a.profit) ;
-
-            //Finding the maximum
-            int maximumDeadline = Integer.MIN_VALUE ;
-            for(int dl : deadline ){
-                maximumDeadline = Math.max(maximumDeadline , dl) ;
-            }
-
-            //Create the boolean array
-            boolean[] isSlotAvailable = new boolean[maximumDeadline + 1] ;
-            int jobCount = 0 ;
-            int totalProfit = 0 ;
-            for(Pair curr : jobList) {
-                int currentDeadline = curr.deadline ;
-                int currentProfit = curr.profit ;
-                for(int j = currentDeadline ; j > 0 ; j--) {
-                    if(!isSlotAvailable[j]) {
-                        isSlotAvailable[j] = true ;
-                        totalProfit += currentProfit ;
-                        jobCount ++ ;
-                        break ;
-                    }
-                }
-            }
-
-            return new ArrayList<>(Arrays.asList(jobCount , totalProfit)) ;
-        }
     }
     public static void main(String[] args) {
 
