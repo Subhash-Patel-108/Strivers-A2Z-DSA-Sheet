@@ -2,15 +2,15 @@ package String.MediumQuestions;
 
 public class ImplementATOI {
     public static class Solution {
-        public int myAtoi(String s) {
-            if (s == null || s.length() == 0) {
+        public int myATOI(String s) {
+            if (s == null || s.isEmpty()) {
                 return 0;
             }
 
             // Remove leading/trailing whitespace
             s = s.trim();
 
-            if (s.length() == 0) {
+            if (s.isEmpty()) {
                 return 0;
             }
 
