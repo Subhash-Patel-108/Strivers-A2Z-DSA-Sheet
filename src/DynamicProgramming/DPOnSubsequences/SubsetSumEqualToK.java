@@ -3,7 +3,7 @@ package DynamicProgramming.DPOnSubsequences;
 //Problem Link : https://www.naukri.com/code360/problems/subset-sum-equal-to-k_1550954
 public class SubsetSumEqualToK {
 
-    public static class Solution {
+    public static class SolutionUsingMemoization {
         public static boolean subsetSumToK(int n, int k, int[] arr) {
             // Handle edge case: null or empty array returns false
             if (arr == null || arr.length == 0) {
@@ -52,6 +52,41 @@ public class SubsetSumEqualToK {
 
             // Return true if subset exists
             return dpArray[idx][target] == 1;
+        }
+    }
+
+    public static class SolutionUsingTabulation {
+        public static boolean subsetSumToK(int n, int k, int[] arr) {
+            // Handle edge case: null or empty array returns false
+            if (arr == null || arr.length == 0) {
+                return false;
+            }
+
+            // Initialize dp array of size n * (k + 1) with -1 for uncomputed states
+            boolean [][] dpArray = new boolean[n][k + 1];
+
+            //Write all the base cases
+            for(int i = 0 ; i < n ; i++) {
+                dpArray[i][0] = true ;
+            }
+
+            if(arr[0] <= k ) {
+                dpArray[0][arr[0]] = true ;
+            }
+
+            for(int idx = 1 ; idx < n ; idx++ ) {
+                for(int target = 1 ; target <= k ; target++ ) {
+                    boolean includeCurrentElement = false ;
+                    if(target >= arr[idx]) {
+                        includeCurrentElement = dpArray[idx - 1][target - arr[idx]] ;
+                    }
+                    boolean notIncludeCurrentElement = dpArray[idx - 1][target] ;
+
+                    dpArray[idx][target] = includeCurrentElement || notIncludeCurrentElement ;
+                }
+            }
+
+            return dpArray[n - 1][k] ;
         }
     }
     public static void main(String[] args) {
